@@ -522,6 +522,7 @@ export default class Presentation extends React.Component {
             {[
               'Avoiding a double pass render with async server-side rendering',
               'Ensuring a mutation completes before a page transition',
+              'Unlocks the potential for an async Apollo cache',
             ].map(item => <ListItem key={item}>{item}</ListItem>)}
           </List>
         </Slide>
