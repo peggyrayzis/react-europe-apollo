@@ -52,28 +52,6 @@ export default graphql(GET_DOG_PHOTO, {
   })
 })(DogPhoto)`;
 
-export const query = `const GET_DOG_PHOTO = gql\`
-query dog($breed: String!) {
-  dog(breed: $breed) {
-    id
-    displayImage
-  }
-}
-\`;`;
-
-export const queryComponent = `const DogPhoto = ({ breed }) => (
-  <Query query={GET_DOG_PHOTO} variables={{ breed }}>
-    {({ loading, error, data }) => {
-      if (loading) return null;
-      if (error) return 'Error!';
-
-      return (
-        <img src={data.dog.displayImage} />
-      );
-    }}
-  </Query>
-);`;
-
 export const fetchMore = `fetchMore({
   variables: { /* new query variables */ },
   updateQuery: (previous, { fetchMoreResult }) => {
@@ -135,3 +113,15 @@ export const update = `<Mutation
   }}
 >
 </Mutation>`;
+
+export const ssr = `import { ApolloProvider, getDataFromTree } from 'react-apollo';
+      
+const components = (
+	<ApolloProvider client={client}>
+		<App />
+	</ApolloProvider>
+);
+
+getDataFromTree(components).then(() => {
+  const html = ReactDOMServer.renderToString(components);
+});`;

@@ -20,4 +20,5 @@ export const Cell = styled('div')(props => ({
   padding: '40px',
   borderRadius: '20px',
   flex: 1,
+  margin: props.margin,
 }));

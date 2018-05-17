@@ -14,9 +14,14 @@ import reactTraining from './assets/react-training.png';
 import apolloTote from './assets/apollo-tote.png';
 import asyncApollo from './assets/react-apollo.png';
 import listView from './assets/listview.png';
+import tidePod from './assets/tide-pod.png';
+import normalization from './assets/normalization.png';
+import reduceComplexity from './assets/apollo-client.png';
+import query from './assets/query.png';
 import alexey from './assets/alexey.png';
 import css2016 from './assets/css-in-js-2016.png';
 import css2018 from './assets/css-in-js-2018.png';
+import dog from './assets/SuspensfulDog.png';
 
 export default {
   apolloLogo,
@@ -38,4 +43,9 @@ export default {
   alexey,
   asyncRendering,
   asyncApollo,
+  normalization,
+  tidePod,
+  reduceComplexity,
+  query,
+  dog,
 };

@@ -1,25 +1,23 @@
-export const definition = `class Click extends React.Component {
-  state = { clicked: false }
-
-  handleClick = () => {
-    this.setState(prevState => ({ clicked: !prevState.clicked }))
+export const query = `const GET_DOG_PHOTO = gql\`
+query dog($breed: String!) {
+  dog(breed: $breed) {
+    id
+    displayImage
   }
+}
+\`;`;
 
-  render = () => (
-    <div onClick={this.handleClick}>
-      {this.props.render(this.state.clicked)}
-    </div>
-  )
-}`;
+export const queryComponent = `const DogPhoto = ({ breed }) => (
+  <Query query={GET_DOG_PHOTO} variables={{ breed }}>
+    {({ loading, error, data }) => {
+      if (loading) return null;
+      if (error) return 'Error!';
 
-export const click = `const Item = () => (
-  <Click
-    render={clicked => {
-      return clicked
-        ? <p>Clicked!</p>
-        : <p>Click me!</p>
+      return (
+        <img src={data.dog.displayImage} />
+      );
     }}
-  />
+  </Query>
 );`;
 
 export const dynamic = `<Query

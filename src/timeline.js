@@ -70,19 +70,21 @@ const Timeline = ({ position, showLabel }) => (
     <Layout.Row width="123%">
       <Layout.Column align="center">
         <Text textColor="primary">2016</Text>
-        {showLabel && <Text textColor="primary">HOCs</Text>}
+        {showLabel && <Text textColor="quartenary">HOCs</Text>}
       </Layout.Column>
       <Layout.Column align="center">
         <Text textColor="primary">2018</Text>
         {showLabel &&
-          (position === 'flex-end' || 'center') && (
-            <Text textColor="primary">Render props</Text>
+          (position === 'center' || position === 'flex-end') && (
+            <Text textColor="quartenary">Render props</Text>
           )}
       </Layout.Column>
       <Layout.Column align="center">
         <Text textColor="primary">????</Text>
         {showLabel &&
-          position === 'flex-end' && <Text textColor="primary">Suspense</Text>}
+          position === 'flex-end' && (
+            <Text textColor="quartenary">Suspense</Text>
+          )}
       </Layout.Column>
     </Layout.Row>
   </div>
