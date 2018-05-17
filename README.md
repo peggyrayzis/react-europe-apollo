@@ -2,8 +2,10 @@
 
 If you'd like to take an intergalactic journey through the past, present, and future of React Apollo, then you came to the right place! My React Europe talk explains the evolution of React Apollo from a higher order component API to a render prop API. You'll also get a sneak peek of what's to come with React Apollo v3.0 and React Suspense! 😮 
 
-## 💻 [View the slides!](https://react-europe-apollo.surge.sh).
-## 🎉 [View the demo!](https://react-europe-apollo.surge.sh).
+## 💻 [View the slides](https://react-europe-apollo.surge.sh)
+## 🎉 [View the async suspense demo](https://codesandbox.io/s/v39j8x450l)
+## 🎉 [View the sync rendering demo](https://codesandbox.io/s/7y04wj2lz1)
+## 🐶 [View the GraphQL server](https://glitch.com/edit/#!/dog-suspense-demo?path=server.js:52:19)
 
 ## Further exploration
 
